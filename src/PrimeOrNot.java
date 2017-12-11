@@ -7,6 +7,7 @@ public class PrimeOrNot {
 		// 1, 0, and negative numbers are not prime.
 		if (inputInt <= 1 ) {
 			JOptionPane.showMessageDialog(null, inputInt + " is not prime.");
+			System.exit(0);
 		}
 	     // Test whether num is prime by testing whether it is evenly divisible by any other numbers besides itself and 1 
         // Loops through and tests the numbers 2 through the square root of num to see if any evenly divide num (and hence that num would not be prime) 
@@ -14,6 +15,7 @@ public class PrimeOrNot {
         for (int x = 2; x <= Math.sqrt(inputInt); x++) { // start at 2 (because the definition of a prime number is that it is only evenly divisible by 1 and itself)
         	if (inputInt % x == 0) {
     			JOptionPane.showMessageDialog(null, inputInt + " is not prime.");
+    			System.exit(0);
         	} 
         }
 		JOptionPane.showMessageDialog(null, inputInt + " is prime!");
